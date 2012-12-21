@@ -1,7 +1,681 @@
-tmp/*
-[Cc]onfig/core.php
-[Cc]onfig/database.php
-app/tmp/*
-app/[Cc]onfig/core.php
-app/[Cc]onfig/database.php
-!empty
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ViaTroll - An Easy Facebook Status Updating Web App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <meta name="description" content="An Easy Facebook Status Updating Web App">
+    <meta name="author" content="Rabby Bhuiyan">
+
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/extension.css" rel="stylesheet">
+    <link href="assets/css/typography.css" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/prettyPhoto.css">
+    <link rel="stylesheet" href="stylesheets/prettyPhoto.css">
+    <link rel="stylesheet" href="stylesheets/isotope.css">	
+	<link rel="stylesheet" href="stylesheets/style.css">
+	
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style>
+	#backstretch{
+		margin: 0px !important;
+	}
+	</style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=281881041907703";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=370342739709708";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+				
+	<ul class="mobile-header visible-phone visible-tablet">	
+		<li>
+				<!-- Start Dropmenu for mobile -->	
+				<select class="dropmenu" name="dropmenu" onChange="moveTo(this.value)">
+					<option value="" selected="selected">Menu</option>
+					<option value="#intro">Home</option>
+					<option value="#Device">Device List</option>
+					<option value="#Request">Request a device</option>
+					<option value="#Discussion">Discussion</option> 
+					<option value="#contact">Contact</option> 
+				</select>
+				<!-- End Dropmenu for mobile -->
+		</li>
+	</ul>
+
+	<header class="masthead visible-desktop">
+		<ul class="links desktop-nav">
+			<li><a href="index.html"><img alt="ViaTroll" title="ViaTroll"  src="images/logo.png"/></a></li>
+			<li><a data-rel="tooltip" title="Home" href="#intro"><img alt="ViaTroll" title="ViaTroll"  src="images/icons/n01.png"/></a></li>
+			<li><a data-rel="tooltip" title="Device List" href="#Device"><img alt="ViaTroll" title="ViaTroll"  src="images/icons/n02.png"/></a></li>
+			<li><a data-rel="tooltip" title="Request a Device" href="#Request"><img alt="ViaTroll" title="ViaTroll"  src="images/icons/n06.png"/></a></li>
+			<li><a data-rel="tooltip" title="Discussion" href="#Discussion"><img alt="ViaTroll" title="ViaTroll"  src="images/icons/Disccsn.png"/></a></li>
+			<li><a data-rel="tooltip" title="Contact" href="#contact"><img alt="ViaTroll" title="ViaTroll"  src="images/icons/mail.png"/></a></li>
+		</ul>
+	</header>
+	
+	<div id="intro">
+	
+		<div class="links"><a href="#Device"><img alt="ViaTroll" title="ViaTroll Face"  id="intro-globe" src="images/intro.png"/></a></div>
+	
+		<h1 id="intro-heading">An Easy <span class="intro-heading-alt">Facebook Status Updating</span> WebApp</h2>
+		<div class="fb-like-box" data-href="http://www.facebook.com/viatroll" data-width="700" data-height="280" data-show-faces="true" data-colorscheme="light" data-stream="false" data-header="false"></div>
+	</div> <!-- end intro -->
+	
+	<div id="promo1" class="promo-parallax">
+		<div class="bg1 parallax-bg"></div>
+		<div class="page">
+
+			<h6 id="Device" class="scroll-milestone"></h6>
+
+			<section class="container-fluid pad-top-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-bottom-half">
+							<article class="span12">
+								<center><h1 class="main-heading"><span>Device</span>List</h2></center>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			<section class="container-fluid full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row">
+							<article class="span12">
+							<h2><font color="red">Examples :</font></h2>
+<center><img border="0.5" src="Oldsite/img/example.JPG" alt="Statusviaupdate example" width="410" height="110" /></center>
+								<p class="promo-text">You can use any custom device for updating your status on Facebook. It changes the "updated via To (Your Selected Device Name)"</p>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			<section class="container-fluid pad-bottom-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-top-half add-bottom-half">
+							
+
+							
+				                  <center><div class="accordion-group">
+				                      <div class="accordion-heading">
+				                      <h2><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#a-collapseTwo">
+				                      Smart Phones/Gadgets
+				                      </a></h2>
+				                      </div>
+				                          <div id="a-collapseTwo" class="accordion-body collapse">
+				                          <div class="accordion-inner">
+				                          		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=426317224070000&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via iPhone 5 </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=2254487659&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via BlackBerry </h2>
+		<h2><a href="http://www.facebook.com/dialog/feed?_path=feed&app_id=192891430824283&&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=popup&to&from_login=1">Update Status :</a> via iPad</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=882a8490361da98702bf97a021ddc14d&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Android</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=166134373479622&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: Facebook Premium Account </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=2254487659&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Blackberry </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=7933375107&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Windows Phone </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=21810043296&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via T-Mobile Sidekick </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=351056538292432&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Galaxy Note </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=142837062513121&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Galaxy SIII </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=281025618659163&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via iPhone 4S  </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=221892944514794&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via GALAXY Tab 10.1</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=436369106392384&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via HTC one X </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=167365506663216&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Nokia N900 </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=242058239178028&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: iPhone 6</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=41158896424&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via HTC Sense </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=191168117625803&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Via Galaxy Nexus</h2>
+				<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=181777111905561&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Kindle</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=486145194750024&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Ipad Mini </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=183495565117621&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Via Lumia 920</h2>
+				<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=142039005875499&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Ipod Nano</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=43769862066&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Sony Ericsson</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=375898912469864&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Via Samsung Galaxy Note 2</h2>
+				<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=201123586595554&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Nokia 808 Pure View</h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=235205506517154&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Nokia 1200 </h2>
+		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=218943684785375&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: Via Nokia 3310</h2>
+		
+
+				                          </div>
+				                          </div>
+				                  </div>
+								  
+
+				                  <div class="accordion-group">
+				                      <div class="accordion-heading">
+				                      <h2><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#a-collapseThree">
+				                      Requested Devices
+				                      </a></h2>
+				                      </div>
+				                          <div id="a-collapseThree" class="accordion-body collapse">
+				                          <div class="accordion-inner">
+
+		<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=341413682592102&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via ItZ Mee</h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=439566606054968&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Chinese iphone </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=342245109161769&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Bangladesh Cricket Board </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=226047154173976&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via BanglaRap </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=281881041907703&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via ViaTroll </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=415181368512310&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via MyPen </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=503383203025199&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Pokedex </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=153842541421355&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via By:chris street </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=153492968124394&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Compania de Red Social </h1>
+		
+
+				                          </div>
+				                          </div>
+				                  </div>
+
+				                  <div class="accordion-group">
+				                      <div class="accordion-heading">
+				                      <h2><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#a-collapseFour">
+				                      Funny Devices
+				                      </a></h2>
+				                      </div>
+									  
+				                          <div id="a-collapseFour" class="accordion-body collapse">
+				                          <div class="accordion-inner">
+				                         		<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=145112045578167&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via ONE OF YOUR FATHERS </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=4453b5fe74be7678e9c29f14dbd2475c&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via calculator </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=e9bb60e84041c1d9af040571984facaa&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Camera </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=298270143561371&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Your Mothers Bedroom</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=187272888017355&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via My Motherfucking iPhone</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=292499357488247&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via My Boyfriend's Mobile </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=287420301272795&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via via Whatever I Think...This Is Me</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=354377947935704&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Android for Nokia 1100</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=321985974532550&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Im Sexy and I Know It </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=211462368923189&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via I Love my Girlfriend</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=133580020059894&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via My own planet</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=123456789123456789123456789123456789&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via FuckBerry </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=f227e6050cf19a6504b89a3ff519b8f3&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via Fuckbook </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=409998775694331&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Alcohol </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=239294052756670&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Artic Vodka</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=115452605187344&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Banana</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=382702368429886&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Coffee</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=48176660688&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Cigarettes </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=252661741439201&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Burger King</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=43111037130&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Cows</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=110455835670222&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Eyephone </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=129985073756521&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Stephen Hawking Wheelchair</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=214428491932960&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Microwave</h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=122150691493&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Mtv </h2>
+<h2><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=a4c9fb1708a848c2241674531176209b&redirect_uri=https%3A%2F%2Fwww.facebook.com">Update Status</a>: via Strawberry </h2>
+		
+
+				                          </div>
+				                          </div>
+				                  </div>
+								  
+
+				                  <div class="accordion-group">
+				                      <div class="accordion-heading">
+				                      <h2><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#a-collapseFive">
+				                      Bangla Devices
+				                      </a></h2>
+				                      </div>
+				                          <div id="a-collapseFive" class="accordion-body collapse">
+				                          <div class="accordion-inner">
+				                         		
+		<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=414419925264404&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2458;&#2508;&#2471;&#2497;&#2480;&#2496; &#2488;&#2494;&#2489;&#2503;&#2476;</h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=393942260644617&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2438;&#2478;&#2495; &#2476;&#2494;&#2434;&#2482;&#2494;&#2439; &#2455;&#2494;&#2472; &#2455;&#2494;&#2479;&#2492; </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=382724545097804&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2488;&#2476;&#2494;&#2480; &#2460;&#2472;&#2509;&#2479;&#2503; &#2476;&#2494;&#2434;&#2482;&#2494; </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=398604176849282&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via  &#2453;&#2497;&#2468;&#2453;&#2497;&#2468;</h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=209652765822705&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2478;&#2472;&#2503;&#2480; &#2460;&#2494;&#2472;&#2494;&#2482;&#2494; </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=177961258988406&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2475;&#2503;&#2439;&#2488;&#2476;&#2497;&#2453; &#2476;&#2494;&#2434;&#2482;&#2494; </h1>
+<h1><a href="https://www.facebook.com/dialog/feed?_path=feed&app_id=351238848275096&redirect_uri=https%3A%2F%2Fwww.facebook.com&display=touch&to&from_login=1&m_sess=1dKlqw-dgO4-smF&_rdr">Update Status</a>: via &#2476;&#2470;&#2472;&#2494; </h1>
+		
+
+				                          </div>
+				                          </div>
+
+				                  </div>
+				                  
+				              </div>
+							
+							</article>
+							</center>
+						</div><!-- row : ends -->
+
+					</section><!-- container : ends -->
+				</div><!-- row-fuild : ends -->
+			</section> <!-- container-fluid : ends-->	
+
+			
+		</div> <!-- page : ends -->
+	</div>
+	<div id="promo7" class="promo-parallax">
+		<div class="bg5 parallax-bg"></div>
+		<div class="page">
+
+			<h6 id="Request" class="scroll-milestone"></h6>
+
+			<section class="container-fluid pad-top-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-bottom-half">
+							<article class="span12">
+								<center><h1 class="main-heading"><span>Request a </span>Device</h2>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row">
+							<article class="span12">
+								<p class="promo-text">Request a device name here and it will be listed on the requested Device catagory</p>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			<section class="container-fluid pad-bottom-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-top-half add-bottom-half">
+							<div class="span8 contact"><!--Begin page content column-->
+
+
+                    <div class="alert success">
+                       Loading... 
+                    </div>
+                    
+                      
+					<center><h2 class="inner-caps ">Enter Details</h2>
+					
+                    <form name="myform" id="contactForm" action="http://viatroll.tk/Oldsite/html_form_send.php" enctype="multipart/form-data" method="post">  
+
+                        <div id="fname"  class="alert alert-error error">
+                        Name must not be empty
+                        </div>
+                        <div id="fmail" class="alert alert-error  error">
+                        Please provide a valid email
+                        </div>
+                        <div id="fmsg" class="alert alert-error  error">
+                        Message should not be empty
+                        </div>
+
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span>
+                            <input class="span3 offset1" required   size="16" type="text" name="name" id="name" placeholder=" Your Name">
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-envelope"></i></span>
+                            <input class="span4" required  size="16" type="email" name="email" id="email" placeholder="Your Email Address">
+                        </div>
+                        <textarea name="message" required  id="msg" class="span10" placeholder="Enter Device Names"></textarea>
+                        <button type="submit" name="submit" id="submit" class="btn btn-ViaTroll">Send Request</button>
+                    </form></center>
+           
+            </div> <!--span8 End-->
+
+       
+						</div><!-- row : ends -->
+
+					</section><!-- container : ends -->
+				</div><!-- row-fuild : ends -->
+			</section> <!-- container-fluid : ends-->	
+
+			
+		</div> <!-- page : ends -->
+	</div>
+	<div id="promo7" class="promo-parallax">
+		<div class="bg5 parallax-bg"></div>
+		<div class="page">
+
+			<h6 id="Discussion" class="scroll-milestone"></h6>
+
+			<section class="container-fluid pad-top-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-bottom-half">
+							<article class="span12">
+								<center><h1 class="main-heading"><span>Share</span>it!</h2>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row">
+							<article class="span12">
+								<p class="promo-text">Post to Facebook,Tell your friends about this app, & Spread the fun! </p>
+							</article>
+						</div><!-- row : ends -->
+						<div class="fb-comments" data-href="http://viatroll.tk" data-width="885" data-num-posts="4" data-colorscheme="dark"></div>
+
+					</section>
+				</div>
+			</section>
+
+			<section class="container-fluid pad-bottom-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-top-half add-bottom-half">
+							
+
+       
+						</div><!-- row : ends -->
+
+					</section><!-- container : ends -->
+				</div><!-- row-fuild : ends -->
+			</section> <!-- container-fluid : ends-->	
+
+			
+		</div> <!-- page : ends -->
+	</div>
+<div id="promo5" class="promo-parallax">
+		<div class="bg5 parallax-bg"></div>
+		<div class="page">
+
+			<h6 id="contact" class="scroll-milestone"></h6>
+
+			<section class="container-fluid pad-top-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-bottom-half">
+							<article class="span12">
+								<h1 class="main-heading"><span>Contact </span>Us</h2>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row">
+							<article class="span12">
+								<p class="promo-text">Contact us for any information help or for the source code of this application.</p>
+							</article>
+						</div><!-- row : ends -->
+
+					</section>
+				</div>
+			</section>
+
+			<section class="container-fluid pad-bottom-main full-bg">
+				<div class="row-fluid">
+					<section class="container">
+
+						<div class="row add-top-half add-bottom-half">
+							<div class="span8 contact"><!--Begin page content column-->
+
+
+                    <div class="alert success">
+                        Well done! You successfully read this important alert message. 
+                    </div>
+                    
+                      
+					<h2 class="inner-caps ">Send a message</h2>
+					
+                    <form name="myform" id="contactForm" action="http://viatroll.tk/Oldsite/html_form_send.php" enctype="multipart/form-data" method="post">  
+
+                        <div id="fname"  class="alert alert-error error">
+                        Name must not be empty
+                        </div>
+                        <div id="fmail" class="alert alert-error  error">
+                        Please provide a valid email
+                        </div>
+                        <div id="fmsg" class="alert alert-error  error">
+                        Message should not be empty
+                        </div>
+
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span>
+                            <input class="span3 offset1" required   size="16" type="text" name="name" id="name" placeholder="Name">
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-envelope"></i></span>
+                            <input class="span4" required  size="16" type="email" name="email" id="email" placeholder="Email Address">
+                        </div>
+                        <textarea name="message" required  id="msg" class="span10" placeholder="Message"></textarea>
+                        <button type="submit" name="submit" id="submit" class="btn btn-ViaTroll">Send Message</button>
+                    </form>
+           
+            </div> <!--span8 End-->
+
+        <!-- Sidebar
+        ================================================== --> 
+        <div class="span4 sidebar page-sidebar"><!-- Begin sidebar column -->
+            <h2 class="inner-caps ">Get in touch with</h2>
+            <address class="remove-bottom pad-bottom-half">
+            <strong>ViaTroll LLC.</strong><br/> 
+            1/23, Mahakhali, Dhaka, Bangladesh.
+            </address>
+            <ul class="social-icons">
+            	<li><span><img alt="ViaTroll" title="ViaTroll"  src="images/icons/s01.png"/></span><a href="#">+8801676997413</a></li>
+            	<li><span><img alt="ViaTroll" title="ViaTroll"  src="images/icons/s02.png"/></span><a href="#">Support@viatroll.tk</a></li>
+            	<li><span><img alt="ViaTroll" title="ViaTroll"  src="images/icons/s03.png"/></span><a href="#">find us on facebok</a></li>
+            	<li><span><img alt="ViaTroll" title="ViaTroll"  src="images/icons/s04.png"/></span><a href="#">@ViaTroll</a></li>
+            </ul>
+
+        </div><!-- span4 / End sidebar column -->
+						</div><!-- row : ends -->
+
+					</section><!-- container : ends -->
+				</div><!-- row-fuild : ends -->
+			</section> <!-- container-fluid : ends-->	
+
+			
+		</div> <!-- page : ends -->
+	</div>
+	
+
+	<footer id="mast-footer">
+		<section class="container-fluid">
+			<div class="row-fluid">
+				<section class="container">
+					<div class="row">
+						<article class="span12">
+							<img alt="ViaTroll" title="ViaTroll" class="pull-left" id="foot-logo" src="images/logo.png"/>
+							<center><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ViaTroll</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</center>
+							<p class="pull-right credits align-right" >Designed & Developed By <a target="_blank" href="http://www.Raweblab.com/">RabbyBhuiyan</a>.<br/>Copyright &copy; 2012 ViaTroll. All rights reserved.</p>
+						</article>
+					</div>
+				</section>
+			</div>
+		</section>
+	</footer>
+
+
+	<!-- JS
+	================================================== -->
+	<script src="javascripts/jquery-1.7.2.min.js"></script>
+	<script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+  	<script src="javascripts/jquery.inview.js"></script>
+  	<script src="javascripts/jquery.localscroll-1.2.7-min.js"></script>
+  	<script src="javascripts/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="javascripts/nbw-parallax.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.prettyPhoto.js"></script> 
+	<script src="javascripts/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/fake-element.js"></script>
+    <script src="javascripts/form-validation.js"></script>
+    <script src="javascripts/jquery.backstretch.min.js"></script>
+  	<script src="javascripts/scroll.js"></script>
+
+  	<!-- Mobile Navigation Scroll Setup -->
+	<script type="text/javascript">
+    	function moveTo(contentArea){
+        	var goPosition = $(contentArea).offset().top;
+        	$('html,body').animate({ scrollTop: goPosition}, 'slow');
+        }
+    </script>
+
+		<script>
+        $.backstretch([
+          "images/bg.jpg",
+          "images/bg1.jpg",
+          "images/bg2.jpg"
+        ], {
+            fade: 3000,
+            duration: 4000
+        });
+    </script>	
+
+	<!-- Sticky nav -->
+	<script>
+
+	$(document).ready(function(){
+
+  	
+
+			$("[data-rel=tooltip]").tooltip({placement: 'left'});
+
+			//PORTFOLIO IMAGE HOVER
+			$('.element').mouseenter(function(){
+				$(this).find('img').css('opacity','0.4');
+			})
+
+			$('.element').mouseleave(function(){
+				$('.element').find('img').css('opacity','1');
+			})
+
+			//PORTFOLIO FILTER ON CLICK
+			$('.inner-link').find('a').click(function(){
+				$('.inner-link').find('a').removeClass('.selected');
+				$(this).addClass('.selected');
+			})
+
+			//Services More Content triggering
+			$('.services-more').click(function(){
+				var servIndex = $(this).attr('data-services');
+				//alert(servIndex);
+				$('#'+servIndex+'-content').slideToggle();
+			})
+
+		});
+	</script>
+	
+	
+
+	
+		<script>
+
+// Initialize prettyPhoto plugin
+	$(".portfolio a[data-gal^='prettyPhoto']").prettyPhoto({
+		theme:'light_square', 
+		autoplay_slideshow: false, 
+		overlay_gallery: false, 
+		show_title: true
+	});
+		
+//MASONRY PORTFOLIO INIT:
+    $(function(){
+      
+      var $container = $('#container');
+
+      $container.isotope({
+        itemSelector : '.element',
+        layoutMode : 'masonry' 
+      });
+      
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // creativewise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+
+      
+    });
+  </script>	
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
